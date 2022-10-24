@@ -22,6 +22,12 @@ skimage
 
 ## Usage
 ### algorithm
+- Set the variables in `Variables.py`.
+ ```
+ Excitation frequency, spatial step size (pixel size), total grid size, hologram pixel size(lateral_resol), transducer diameter, target plane distance, 
+ parameters of the algorithms (ex. learning rate, batch size, loss), parameters of the dataset
+ ```
+
 - Select one of the algorithms in `main.py`.
 1) Diff-PAT for phase-only holograms
 2) Iterative angular spectrum approach (IASA)
@@ -40,5 +46,18 @@ skimage
  ``` 
  propagated_pressure=algorithm.propagate(retrieved_phase,expand_ratio)
  -- expand_ratio: Increase spatial sampling for accurate simulation
+ ```
+ 
+ - Visualize and assess the result
+ 
+ ```
+ algorithm.visualize(target_img, retrieved_phase, propagated_pressure)
+ algorithm.assess(target_img, propagated_pressure,expand_ratio)
+ ```
+ 
+ - Save the results if needed
+ ```
+ algorithm.save_result_pressure(propagated_pressure,letter=img_name, save_path)
+ algorithm.save_matrix(retireved_phase,letter=img_name, save_path)
  ```
 
