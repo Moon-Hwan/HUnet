@@ -9,7 +9,7 @@ Autoencoder architecture with encoder(neural network) and decoder(simulation met
 Trains the encoder to make output of decoder indentical to the input of encoder.
 
 
-Used environment:
+- Used environment:
 Python 3.8
 Tensorflow 2.5
 numpy 1.21.5
