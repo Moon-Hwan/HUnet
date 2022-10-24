@@ -7,10 +7,6 @@ The framework contains its architecture, networks, loss functions and datasets f
 Autoencoder architecture with encoder(neural network) and decoder(simulation method, angular spectrum method).
 Trains the encoder to make output of decoder indentical to the input of encoder.
 
-
-
-![COMP_PIXELS_v2](https://user-images.githubusercontent.com/70740386/197447207-ec1ddfa7-1f4d-440c-9b11-b0f9ab3ae54c.png)
-
 The paper addressed this framework is in revision now.
 
 
