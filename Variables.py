@@ -14,7 +14,7 @@ lamda=c0/Freq #[m] wavelength at Freq
 # Hologram and target plane is on YZ axis. Wave propagates toward +X axis.
 prop_expand_ratio=3
 dilation_factor=int(3/prop_expand_ratio) # Apply dilation to dots and disk if the pixel size decreased
-dx=lamda/(3*dilation_factor) #250um (lamda/3) / 83.3um (lamda/9) 187.5um (lamda/4)
+dx=lamda/(3*dilation_factor) #250um (lamda/3) / 83.3um (lamda/9) 
 dy=dx
 dz=dx
 
@@ -37,7 +37,7 @@ medium=medium(sound_speed=c0,density=1000,alpha_coeff=0.0022, alpha_power=1.0001
 
 single_txdr=True
 D_txdr=13 #[mm] size of the single element circular transducer
-lateral_resol=750e-6 # hologram pixel size: 300um for 3D printed lens & 750um for 2MHz 2D array
+lateral_resol=750e-6 # hologram pixel size: 250um for 3D printed lens & 750um for 2MHz 2D array
 axial_resol=40e-6 # Not used. Can be used for define axial resolution of 3D printer or delay resolution of ultrasound system
 SoS_3Dm=2495 #[m/s] sound speed of 3D print material (vero white of Stratasys)
 txdr_ele_num=round(D_txdr*1e-3/lateral_resol)
@@ -62,7 +62,7 @@ txdr_position=txdr_output.ele_pos
 txdr_points_spec=txdr_output.points
 
 # set total number of grid points not including the PML
-Ny_PC = round(Ny/txdr_points_spec.height)*txdr_points_spec.height     # [grid points] 48의 배수 + 20
+Ny_PC = round(Ny/txdr_points_spec.height)*txdr_points_spec.height     # [grid points] multiple of 48 + 20
 
 # Visualize the txdr
 elem_position=txdr_output.ele_pos
