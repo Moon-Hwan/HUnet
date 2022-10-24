@@ -28,7 +28,15 @@ skimage
 3) Ours: HU-Net
 
 - Load target binary image 
-  ```target_img=algorithm.load_target_img(target_path,plot=True)```
-- Retrieve phase-only hologram (algorithm.get_phase(target_img,get_computation_time))
-- 
+ 
+ ```target_img=algorithm.load_target_img(target_path,plot=True)```
+ 
+- Retrieve phase-only hologram 
+
+```retrieved_phase=algorithm.get_phase(target_img,get_computation_time=True) ```
+
+- Reconstruct the target acoustic field by propagating the retrieved hologram
+ 
+ ``` propagated_pressure=algorithm.propagate(retrieved_phase,expand_ratio)
+ -- expand_ratio: Increase spatial sampling for accurate simulation```
 
