@@ -21,9 +21,14 @@ tqdm
 skimage
 
 ## Usage
-### Method
-Select one of the methods in `main.py`.
+### algorithm
+- Select one of the algorithms in `main.py`.
 1) Diff-PAT for phase-only holograms
 2) Iterative angular spectrum approach (IASA)
 3) Ours: HU-Net
+
+- Load target binary image 
+  ```target_img=algorithm.load_target_img(target_path,plot=True)```
+- Retrieve phase-only hologram (algorithm.get_phase(target_img,get_computation_time))
+- 
 
