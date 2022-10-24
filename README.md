@@ -21,7 +21,6 @@ tqdm
 skimage
 
 ## Usage
-### algorithm
 - Set the variables in `Variables.py`.
  ```
  Excitation frequency, spatial step size (pixel size), total grid size, hologram pixel size(lateral_resol), transducer diameter, target plane distance, 
