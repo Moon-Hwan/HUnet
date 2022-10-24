@@ -37,6 +37,8 @@ skimage
 
 - Reconstruct the target acoustic field by propagating the retrieved hologram
  
- ``` propagated_pressure=algorithm.propagate(retrieved_phase,expand_ratio)
- -- expand_ratio: Increase spatial sampling for accurate simulation```
+ ``` 
+ propagated_pressure=algorithm.propagate(retrieved_phase,expand_ratio)
+ -- expand_ratio: Increase spatial sampling for accurate simulation
+ ```
 
