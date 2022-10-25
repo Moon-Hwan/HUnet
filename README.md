@@ -4,7 +4,9 @@
 Our framework is for a learned neural network which can rapidly generate accurate **acoustic hologram**.
 ![architecture](https://user-images.githubusercontent.com/70740386/197447338-8e6e0858-f8a6-49f1-a460-f4be6d41442f.png)
 The framework contains its architecture, networks, loss functions, and datasets for training.
+
 Autoencoder architecture with encoder(neural network) and decoder(simulation method, angular spectrum method).
+
 Trains the encoder to make the output of the decoder identical to the input of the encoder.
 
 The paper addressed this framework is under review.
