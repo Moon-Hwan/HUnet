@@ -10,10 +10,12 @@ Autoencoder architecture with encoder(neural network) and decoder(simulation met
 Trains the encoder to make the output of the decoder identical to the input of the encoder.
 
 The decoder is also implemented using Tensorflow library for gradient flow. 
+
 It should be noted if someone want to modify and try new things based on this codes.
 
-The paper addressed this framework is publicated in IEEE Transactions on Ultrasonics, Ferroeletrics, and Frequency Control.
-(DOI: 10.1109/TUFFC.2022.3219401 )
+[The paper addressed this framework is publicated in IEEE Transactions on Ultrasonics, Ferroeletrics, and Frequency Control.]
+(10.1109/TUFFC.2022.3219401)
+
 
 
 ## Used environment
