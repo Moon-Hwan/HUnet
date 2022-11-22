@@ -15,7 +15,7 @@ It should be noted if someone want to modify and try new things based on this co
 
 [The paper addressed this framework is publicated in IEEE Transactions on Ultrasonics, Ferroeletrics, and Frequency Control.](https://ieeexplore.ieee.org/document/9939026)
 
-## Citation
+### Citation
 M. H. Lee, H. M. Lew, S. Youn, T. Kim and J. Y. Hwang, "Deep learning-based framework for fast and accurate acoustic hologram generation," in IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control, 2022, doi: 10.1109/TUFFC.2022.3219401.
 
 
