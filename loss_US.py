@@ -40,7 +40,7 @@ class CustomLoss(Loss):
 
         y_true= target_resize_func(y_true,self.expand_ratio, self.prop_param)
 
-        on_target_mean, off_target_mean, on_target_std = self.efficiency(y_true,y_pred_prop)
+        on_target_mean, off_target_mean = self.efficiency(y_true,y_pred_prop)
 
         intensity_lamda=self.intensity_lamda
 
@@ -56,16 +56,16 @@ class CustomLoss(Loss):
 
 
     def efficiency(self,y_true, y_pred):
-        on_target = tf.math.multiply(y_true, y_pred)
-        zero_mask = tf.math.not_equal(on_target,0)
-        on_target_mean=tf.reduce_mean(tf.boolean_mask(on_target,zero_mask))
-        on_target_std = tf.math.reduce_std(tf.boolean_mask(on_target,zero_mask))
-
-        off_target = tf.math.multiply(tf.abs(y_true-tf.constant(1.0)),y_pred)
-        non_zero_mask = tf.math.equal(on_target, 0)
-        off_target_mean = tf.reduce_mean(tf.boolean_mask(off_target,non_zero_mask))
-
-        return on_target_mean, off_target_mean, on_target_std
+        # Calculation for on-target efficiency
+        zero_mask = tf.math.not_equal(y_true, 0)
+        # Adding a small value to avoid division by zero
+        on_target_mean = tf.reduce_mean(tf.boolean_mask(y_pred, zero_mask)) 
+        
+        # Calculation for off-target efficiency
+        non_zero_mask = tf.math.equal(y_true, 0)
+        off_target_mean = tf.reduce_mean(tf.boolean_mask(y_pred, non_zero_mask)) 
+        
+        return on_target_mean, off_target_mean
 
     def uniformity(self,true,pred):
         on_target = tf.math.multiply(true, pred)
